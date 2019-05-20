@@ -2,13 +2,8 @@ package datalayer
 
 import "context"
 
-var (
-	// DataStores List of datastores that are registered.
-	DataStores = make(map[string]DataStorer)
-
-	// DataLayerRegistry is for the top level object to store registered data stores.
-	DataLayerRegistry = &Registry{}
-)
+// R is for the top level object to store registered data stores.
+var R = &Registry{}
 
 type Requester interface {
 	// GetContext Gets the context of the request
